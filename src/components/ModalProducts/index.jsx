@@ -48,6 +48,7 @@ const ModalProducts = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  console.log("a");
   const dispatch = useDispatch();
   const ui = useSelector((state) => state.ui);
   const products = useSelector((state) => state.products);
@@ -164,6 +165,8 @@ const ModalProducts = () => {
   return (
     <>
       <Dialog
+
+
         fullWidth={true}
         maxWidth={false}
         open={ui.showModal}
