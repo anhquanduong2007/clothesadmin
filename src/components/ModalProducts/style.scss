@@ -1,0 +1,137 @@
+@import "../../sass/mixin";
+@import "../../sass/color";
+@import "../../sass//keyframes";
+.modalProducts {
+    margin-top: 60px;
+
+    &>div {
+        &>div {
+            padding: 30px 20px;
+
+            &::-webkit-scrollbar {
+                background-color: #fff;
+                width: 16px;
+            }
+
+            /* background of the scrollbar except button or resizer */
+            &::-webkit-scrollbar-track {
+                background-color: #fff;
+            }
+
+            /* scrollbar itself */
+            &::-webkit-scrollbar-thumb {
+                background-color: #babac0;
+                border-radius: 16px;
+                border: 4px solid #fff;
+            }
+
+            /* set button(top and bottom of the scrollbar) */
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+        }
+    }
+
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+        &>label {
+            padding-bottom: 10px;
+        }
+        & > select {
+            margin-bottom: 20px ;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #333;
+            &:focus {
+                border-color: $blue;
+            }
+        }
+        &>textarea {
+            margin-top: 10px;
+            padding: 8px 5px;
+            width: 100%;
+            height: 300px;
+            border: 2px solid #333;
+            box-shadow: 1px 1px 1px #999;
+            resize: none;
+
+            &:focus {
+                outline: none !important;
+                border-color:$blue;
+
+            }
+        }
+
+
+    }
+
+    &-actions {
+        padding: 0 20px 30px 0 !important;
+    }
+
+    &-label {
+        margin: 20px 0;
+
+        &>i {
+            @include flexCenterRow;
+            font-size: 1.8rem;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &-img {
+        position: relative;
+        height: 300px;
+        margin: 20px 0;
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            &-slide {
+                text-align: center;
+                background: #fff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                & img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    object-position: center;
+                    border-radius: 20px;
+                }
+            }
+
+        }
+
+
+
+    }
+    .loadingProduct {
+        .loading-action {
+            position: relative;
+            bottom: 0;
+            left: 0%;
+            width: 5%;
+            background: #3F51B5;
+            height: 5px;
+            border-radius: 10px;
+            animation: load-line 2s infinite;
+        }
+    }
+    
+
+}

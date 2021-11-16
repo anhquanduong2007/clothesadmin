@@ -1,0 +1,86 @@
+@import "../../sass/mixin";
+@import "../../sass/color";
+
+.products {
+    margin-top: 60px;
+    margin-left: 280px;
+    width: 100%;
+    padding: 20px 15px;
+    &-navigation {
+        justify-content: space-between;
+        background-color: #fff;
+        margin-bottom: 30px;
+        padding: 25px 20px;
+        border-radius: 6px;
+
+        &>div {
+            border: 1px solid rgb(54, 52, 52);
+            width: 400px;
+            padding: 8px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &>input {
+                border: none;
+                outline: none;
+                flex: 1;
+                padding: 5px 10px;
+            }
+
+            &:focus-within {
+                border-color: $blue;
+            }
+        }
+    }
+
+    &__table {
+        &>table {
+            border-collapse: collapse;
+            width: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #fff;
+
+            &>thead {
+                &>tr {
+                    &>th {
+                        padding: 20px;
+                    }
+                    pointer-events: none;
+                }
+            }
+
+            &>tbody {
+                &>tr {
+                    text-align: center;
+                    padding: 0;
+                    &:hover {
+                        background-color: #ddd;
+                    }
+                    &>td {
+                        font-size: 0.9rem;
+                        text-align: center;
+                        padding: 16px 20px;
+                        border-top: 1px solid #ccc;
+                        &:last-child {
+                            &>i {
+                                &:first-child {
+                                    color: #0DCAF0;
+                                }
+                                padding: 5px;
+                                font-size: 1.2rem;
+                                cursor: pointer;
+                                color: #ffc107;
+                                &:last-child {
+                                    color: #f44336;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
